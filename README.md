@@ -82,8 +82,7 @@ Google Colab is used for training because it provides free GPU access and requir
 Click the link below to open the training notebook in Google Colab.
 You must be logged into your Google account to run the notebook.
 
-
-https://colab.research.google.com/github/tkrithika/object-detection-yolo/blob/main/Train_YOLO_Models.ipynb
+https://colab.research.google.com/drive/1b7uYp4vSJWu_aYdvVwYZ1ukOrLY_8PLV#scrollTo=YgPxV3OVYfZy
 
 
 

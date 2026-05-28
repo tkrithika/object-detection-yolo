@@ -8,7 +8,7 @@ Training custom object detection models using YOLO in Google Colab
 This repository demonstrates a complete workflow for training a custom object detection model using YOLO and Google Colab. The project covers dataset collection, annotation, model training on a free GPU, and running inference on images, videos, or a USB camera.
 
 The example use case focuses on **pothole detection**, but the same workflow can be adapted for any object detection task.
-
+![Pothole Detection Demo](demo.gif)
 ---
 
 ## Tools & Technologies

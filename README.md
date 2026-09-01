@@ -26,13 +26,13 @@ The example use case focuses on **pothole detection**, but the same workflow can
 
 ## Tools & Technologies
 
-* **Google Colab** – Cloud-based Python environment with free GPU support
-* **YOLO (v5 / v8 / v11)** – Object detection framework
-* **Label Studio** – Data annotation tool
-* **Kaggle** – Dataset source
-* **Roboflow** – Dataset management and conversion
-* **Open Images V7** – Public image dataset
-* **Anaconda** – Python environment and package manager
+* **Google Colab** : Cloud-based Python environment with free GPU support
+* **YOLO (v5 / v8 / v11)** : Object detection framework
+* **Label Studio** : Data annotation tool
+* **Kaggle** : Dataset source
+* **Roboflow** : Dataset management and conversion
+* **Open Images V7** : Public image dataset
+* **Anaconda** : Python environment and package manager
 
 ---
 

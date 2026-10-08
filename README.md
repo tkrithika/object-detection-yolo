@@ -192,6 +192,42 @@ python yolo_detect.py --model my_model.pt --source sample_video.mp4
 
 ---
 
+## Workflow 2: Roboflow + YOLO26 
+
+A faster workflow using the newest Ultralytics model, **YOLO26**, with labelling and dataset versions in **Roboflow**.
+
+### Files
+
+| File | What it does |
+|---|---|
+| `tools/video_to_frames.py` | Turns videos into images for labelling (5 images per second by default, optional blur filter) |
+| `notebooks/train_yolo26_detection.ipynb` | Downloads a Roboflow dataset, trains YOLO26 on a free Colab GPU, shows results, tests on images and videos |
+
+### Steps
+
+1. **Record videos** of the objects you want to detect, in every state and on several backgrounds. Transfer the original files (messaging apps compress video).
+2. **Turn videos into images:**
+   ```
+   pip install opencv-python
+   python tools/video_to_frames.py videos --fps 5 --out frames
+   ```
+3. **Label in Roboflow:** create an Object Detection project, upload the `frames` folder, draw boxes (or use Auto Label and review every image), then **Add to Dataset**.
+4. **Create a version:** Auto-Orient, Resize *Fit (black edges)* 640x640, light augmentations (flip, brightness, blur, noise).
+5. **Train in Colab:** open the notebook (File > Upload notebook), set Runtime to **T4 GPU**, fill in the settings cell and run all cells.
+6. **Download the model** (`best.pt`) as soon as training finishes; Colab deletes files when it disconnects.
+
+### API key
+
+The notebook reads the Roboflow API key from **Colab Secrets** (key icon > add `ROBOFLOW_API_KEY` > turn on Notebook access). Never paste a real key into a notebook or commit it to this repo.
+
+### Lessons learned
+
+- **Film every state under the same conditions.** For example, if "cap on" is always filmed on one background and "cap off" on another, the model learns the background instead of the cap.
+- **Validation scores can be optimistic** when training and validation frames come from the same videos. Always test on a new video.
+- **Public datasets are a starting point only.** A model trained on public data usually needs your own images to work well on your objects.
+
+---
+
 ## Notes
 
 * Large datasets and trained models are not included in this repository

@@ -92,10 +92,13 @@ Google Colab is used for training because it provides free GPU access and requir
 
 ## Open in Google Colab
 
-Click the link below to open the training notebook in Google Colab.
-You must be logged into your Google account to run the notebook.
+The training notebook for this workflow is in the `notebooks` folder:
+[`notebooks/train_yolo11_labelstudio.ipynb`](notebooks/train_yolo11_labelstudio.ipynb)
 
-https://colab.research.google.com/drive/1b7uYp4vSJWu_aYdvVwYZ1ukOrLY_8PLV#scrollTo=YgPxV3OVYfZy
+To open it directly in Google Colab, click here:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tkrithika/object-detection-yolo/blob/main/notebooks/train_yolo11_labelstudio.ipynb)
+
+You must be logged into your Google account to run the notebook.
 
 
 
@@ -111,7 +114,7 @@ https://colab.research.google.com/drive/1b7uYp4vSJWu_aYdvVwYZ1ukOrLY_8PLV#scroll
 
 ## Training Notebook
 
-* **Notebook Name:** `Train_YOLO_Models.ipynb`
+* **Notebook:** `notebooks/train_yolo11_labelstudio.ipynb`
 * This notebook handles:
 
   * Environment setup
